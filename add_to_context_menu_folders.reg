@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\ConvertToText]
+@="تبدیل به متن"
+
+[HKEY_CLASSES_ROOT\Directory\shell\ConvertToText\command]
+@="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""

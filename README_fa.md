@@ -55,3 +55,51 @@ pyinstaller --onefile convert_to_txt.py
 
 ## **مجوز**
 این پروژه تحت مجوز MIT منتشر شده است.
+
+
+## **افزودن گزینه به منوی کلیک راست ویندوز**
+برای سهولت در استفاده، می‌توانید گزینه‌ای به منوی کلیک راست ویندوز اضافه کنید. با این کار، امکان اجرای ابزار مستقیماً از طریق کلیک راست روی فایل یا پوشه فراهم می‌شود.
+
+---
+
+### **تنظیم رجیستری برای کلیک راست روی فایل‌ها**
+1. یک فایل متنی جدید ایجاد کرده و نام آن را `add_to_context_menu_files.reg` بگذارید.
+2. محتوای زیر را در آن کپی کنید:
+   ```reg
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText]
+   @="تبدیل به متن"
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText\command]
+   @="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""
+   ```
+3. مسیر `E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe` را با مسیر فایل اجرایی خود جایگزین کنید.
+4. فایل را ذخیره کنید.
+5. روی فایل کلیک راست کرده و گزینه **Merge** را انتخاب کنید.
+
+---
+
+### **تنظیم رجیستری برای کلیک راست روی پوشه‌ها**
+1. یک فایل متنی دیگر ایجاد کرده و نام آن را `add_to_context_menu_folders.reg` بگذارید.
+2. محتوای زیر را در آن کپی کنید:
+   ```reg
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\Directory\shell\ConvertToText]
+   @="تبدیل به متن"
+
+   [HKEY_CLASSES_ROOT\Directory\shell\ConvertToText\command]
+   @="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""
+   ```
+3. مسیر فایل اجرایی را به‌درستی تنظیم کنید.
+4. فایل را ذخیره و اجرا کنید.
+
+---
+
+### **نکات مهم**
+- مطمئن شوید مسیر فایل اجرایی (`convert_to_txt.exe`) صحیح است.
+- برای حذف این گزینه‌ها، کافی است کلیدهای مربوطه را از رجیستری حذف کنید:
+  - مسیر فایل‌ها: `HKEY_CLASSES_ROOT\*\shell\ConvertToText`
+  - مسیر پوشه‌ها: `HKEY_CLASSES_ROOT\Directory\shell\ConvertToText`
+

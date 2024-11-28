@@ -1,0 +1,18 @@
+---
+
+## **افزودن گزینه به منوی کلیک راست ویندوز**
+برای سهولت در استفاده، می‌توانید گزینه‌ای به منوی کلیک راست ویندوز اضافه کنید. با این کار، امکان اجرای ابزار مستقیماً از طریق کلیک راست روی فایل یا پوشه فراهم می‌شود.
+
+---
+
+### **تنظیم رجیستری برای کلیک راست روی فایل‌ها**
+1. یک فایل متنی جدید ایجاد کرده و نام آن را `add_to_context_menu_files.reg` بگذارید.
+2. محتوای زیر را در آن کپی کنید:
+   ```reg
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText]
+   @="تبدیل به متن"
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText\command]
+   @="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""

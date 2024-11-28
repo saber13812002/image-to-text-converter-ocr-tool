@@ -55,3 +55,51 @@ Current Version: 1.0.0
 
 ## **License**
 This project is licensed under the MIT License.
+
+
+## **Adding to Windows Right-Click Context Menu**
+To make the tool easier to use, you can add an option to the Windows right-click context menu. This allows you to execute the tool directly from the menu for files or folders.
+
+---
+
+### **Registry Settings for Files**
+1. Create a new text file and name it `add_to_context_menu_files.reg`.
+2. Copy the following content into the file:
+   ```reg
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText]
+   @="Convert to Text"
+
+   [HKEY_CLASSES_ROOT\*\shell\ConvertToText\command]
+   @="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""
+   ```
+3. Replace `E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe` with the path to your executable file.
+4. Save the file.
+5. Right-click on the file and select **Merge**.
+
+---
+
+### **Registry Settings for Folders**
+1. Create another text file and name it `add_to_context_menu_folders.reg`.
+2. Copy the following content into the file:
+   ```reg
+   Windows Registry Editor Version 5.00
+
+   [HKEY_CLASSES_ROOT\Directory\shell\ConvertToText]
+   @="Convert to Text"
+
+   [HKEY_CLASSES_ROOT\Directory\shell\ConvertToText\command]
+   @="\"E:\\saberprojects\\kasra\\image-to-text-windows-python\\dist\\convert_to_txt.exe\" \"%1\""
+   ```
+3. Replace the executable path with your own.
+4. Save and run the file.
+
+---
+
+### **Important Notes**
+- Make sure the path to the executable (`convert_to_txt.exe`) is correct.
+- To remove the options, delete the following registry keys:
+  - For files: `HKEY_CLASSES_ROOT\*\shell\ConvertToText`
+  - For folders: `HKEY_CLASSES_ROOT\Directory\shell\ConvertToText`
+
