@@ -1,0 +1,54 @@
+0 Fite
+
+Edit View Git Project Build Debug Test Analyze Tools Extensions ~Window Help © © Search» eShop e - x
+
+@- ia- a Debug ~ Any CPU + eShopAppHost ~ DP https ~ D o- BA, 6 &ea0 & GitHub Copilot |@ 3 — INTPREVIEW
+Catalog.razor Cataloglistitemrazor # X UserMenurazor What's New? ¥ # GitHub Copilot Chat
+[WebAppComponents. + Catalog.Cataloglistitem ~ & Productlmages + += — D Edits: If the user isn't logged in, change the subtitle t...
+3 “
+4 v <div BIBB--catalog-items> © opilot Edits
+5 4 <a ¢lass="catalog-product” href="@ltemHelper.Ur1(Item)" data-enhance-nav="false"> |
+a © | <span €lass=" catalog-product-image" > Edits generated
+7 H <img alt="@Item.Name” src-"@ProductImages .GetProductImageUr1(Item)" /> BH Here's a summary of the changes:
+8 | </span>
+9 y <span ¢lass="catalog-product-content > 1. Modify the Cataloglistitem component to conditionally display the
+10 “name >@Item.Name</span> discounted price if the user is logged in.
+
+2. Update the Catalog.razor file to pass the user's login status to the
+Cataloglistitem component.
+
+Tab |to-accept || Alte/ to modify
+
+ [style-"text-decoration: line-through;">g@Item.Pricek/spdn ® .
+Elass="new-price™ style="color: green;">$@flath.Round(Item.Price * 0.74, ak @ tteration 4 fa
+
+A Cataloalistitem.razor bre\WebAppComponents\Catalog wv
+
+<span
+</span>
+
+a
+18 v { else
+5) { BB Catalog.razor src\WebApp\Components\Pages\Catalog v
+20 <span €laSs='price’>$@ltem.Pricek/span> _ —> PricdsTOStRAnE(=O100")k
+2 Hl } (Gf References Was this helpful? © ©?
+22 </span>
+23 </a>
+24 </div>
+25
+@1 ao PY Ln4 cho32 sec cree IS
+Error vax
+= ‘Al suggestions might be inaccurate
+Entire Solution + | 1Eror | [A 2 Warnings | @ o Messages [=] |Build + Intellisense > Search Error List 25 | =
+s a i
+7 Code | Description Project File Line % Include active document
+The type or namespace name ‘Catalogitem’ could not be Ask Copilot or use @workspace
+© €S0246 found (are you missing a using directive or an assembly WebAppComponents Cataloglistltem.razor 28
+reference?)
+Found markup element with unexpected name a>
+A. RZ10012 ‘CatalogSearch’. If this is intended to be a component, add a Catalog.razor 6 Y
+Error List | Output GitHub Copilot Chat | Solution Explorer Git Changes
+
+DD Ready
+
+Tlosos 24 $8main= TB eShop+ O
